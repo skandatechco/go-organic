@@ -25,7 +25,7 @@ export default function ArticleCard({ post }: ArticleCardProps) {
           </div>
         )}
         <CardHeader>
-          <div className="flex items-center gap-2 text-xs text-text/60 mb-2">
+          <div className="flex items-center gap-2 caption mb-2">
             <span>{formatDate(post.date, 'MMM d, yyyy')}</span>
             <span>•</span>
             <div className="flex items-center gap-1">
@@ -34,7 +34,7 @@ export default function ArticleCard({ post }: ArticleCardProps) {
             </div>
           </div>
           {post.category && (
-            <span className="inline-block px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded mb-2">
+            <span className="inline-block px-3 py-1 category-tag mb-2">
               {post.category}
             </span>
           )}
@@ -49,7 +49,7 @@ export default function ArticleCard({ post }: ArticleCardProps) {
               {post.tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 text-xs bg-highlight/10 text-highlight rounded"
+                  className="px-3 py-1 category-tag"
                 >
                   {tag}
                 </span>

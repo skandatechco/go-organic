@@ -45,18 +45,20 @@ const config: Config = {
           'Cantarell',
           'sans-serif',
         ],
-        display: ['Playfair Display', 'serif'],
+        heading: ['Cormorant Garamond', 'serif'],
+        display: ['Cormorant Garamond', 'serif'],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],
-        sm: ['0.875rem', { lineHeight: '1.571' }],
-        base: ['1rem', { lineHeight: '1.6' }],
-        lg: ['1.125rem', { lineHeight: '1.667' }],
+        sm: ['0.875rem', { lineHeight: '1.5' }],
+        base: ['1.125rem', { lineHeight: '1.65' }], // 18px body text
+        lg: ['1.125rem', { lineHeight: '1.65' }],
         xl: ['1.25rem', { lineHeight: '1.6' }],
-        '2xl': ['1.5rem', { lineHeight: '1.533' }],
-        '3xl': ['2rem', { lineHeight: '1.375' }],
-        '4xl': ['2.5rem', { lineHeight: '1.2' }],
-        '5xl': ['3rem', { lineHeight: '1.167' }],
+        '2xl': ['1.5rem', { lineHeight: '1.4' }], // H3 mobile
+        '3xl': ['1.875rem', { lineHeight: '1.3' }], // H2 mobile
+        '4xl': ['2.25rem', { lineHeight: '1.2' }], // H1 mobile
+        '5xl': ['2.625rem', { lineHeight: '1.3' }], // H2 desktop
+        '6xl': ['3.5rem', { lineHeight: '1.2' }], // H1 desktop
       },
       typography: {
         DEFAULT: {

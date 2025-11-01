@@ -37,7 +37,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'px-3 py-2 text-sm font-medium text-text hover:text-primary transition-colors rounded-md hover:bg-primary/5'
+                  'px-3 py-2 text-[15px] md:text-base font-medium text-text hover:text-primary transition-colors rounded-md hover:bg-primary/5 nav-link'
                 )}
               >
                 {item.name}
@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-primary/5 transition-colors rounded-md"
+                  className="px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-primary/5 transition-colors rounded-md nav-link"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

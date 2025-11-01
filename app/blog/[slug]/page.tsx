@@ -66,13 +66,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Article Header */}
             <header className="mb-8">
               {post.category && (
-                <span className="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full mb-4">
+                <span className="inline-block px-3 py-1 category-tag mb-4">
                   {post.category}
                 </span>
               )}
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">{post.title}</h1>
 
-              <div className="flex flex-wrap items-center gap-4 text-text/70 text-sm mb-6">
+              <div className="flex flex-wrap items-center gap-4 caption mb-6">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 text-sm bg-highlight/10 text-highlight rounded-full"
+                    className="px-3 py-1 category-tag"
                   >
                     #{tag}
                   </span>

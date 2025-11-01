@@ -2,57 +2,187 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   body {
     @apply bg-background text-text antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #5D4E37;
   }
-  h1,
-  h2,
-  h3,
+  
+  /* H1 - Main headlines (Cormorant Garamond, SemiBold 600) */
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 2.25rem; /* 36px mobile */
+    line-height: 1.2;
+    color: #5D4E37; /* Coffee Brown */
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem; /* 56px desktop */
+    }
+  }
+  
+  /* H2 - Section headers (Cormorant Garamond, Medium 500) */
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.875rem; /* 30px mobile */
+    line-height: 1.3;
+    color: #3A7D44; /* Garden Green */
+  }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.625rem; /* 42px desktop */
+    }
+  }
+  
+  /* H3 - Subheadings (Cormorant Garamond, Medium 500) */
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.5rem; /* 24px mobile */
+    line-height: 1.4;
+    color: #5D4E37; /* Coffee Brown */
+  }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.75rem; /* 28px desktop */
+    }
+  }
+  
   h4,
   h5,
   h6 {
-    @apply font-semibold text-primary;
     font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #5D4E37;
   }
-  h1 {
-    @apply text-4xl md:text-5xl;
-    line-height: 1.2;
-  }
-  h2 {
-    @apply text-3xl md:text-4xl;
-    line-height: 1.25;
-  }
-  h3 {
-    @apply text-2xl md:text-3xl;
-    line-height: 1.3;
-  }
-  h4 {
-    @apply text-xl md:text-2xl;
-    line-height: 1.4;
-  }
-  h5 {
-    @apply text-lg md:text-xl;
-    line-height: 1.5;
-  }
-  h6 {
-    @apply text-base md:text-lg;
-    line-height: 1.5;
-  }
+  
+  /* Links - Garden Green, hover to Fresh Lime */
   a {
-    @apply text-primary hover:text-primary-dark transition-colors;
+    color: #3A7D44; /* Garden Green */
+    transition: color 0.2s ease;
+  }
+  a:hover {
+    color: #7CB342; /* Fresh Lime */
+  }
+  
+  /* Paragraph text - Inter Regular 400, 18px */
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.65;
+    color: #5D4E37;
+    max-width: 65ch;
+  }
+  
+  /* Bold emphasis - Inter SemiBold 600 */
+  strong,
+  b {
+    font-weight: 600;
   }
 }
 
 @layer components {
   .container-custom {
     @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  /* Navigation menu - Inter Medium 500, 15-16px */
+  .nav-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375rem; /* 15px */
+    color: #5D4E37; /* Coffee Brown */
+    transition: color 0.2s ease;
+  }
+  @media (min-width: 768px) {
+    .nav-link {
+      font-size: 1rem; /* 16px */
+    }
+  }
+  .nav-link:hover {
+    color: #3A7D44; /* Garden Green */
+  }
+  
+  /* Buttons/CTAs - Inter Medium 500, 16-18px */
+  .btn-organic {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.5px;
+    padding: 12px 24px;
+    border-radius: 6px;
+  }
+  @media (min-width: 768px) {
+    .btn-organic {
+      font-size: 1.125rem; /* 18px */
+      padding: 14px 28px;
+      border-radius: 8px;
+    }
+  }
+  
+  /* Captions/Metadata - Inter Light 300, 14px */
+  .caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5;
+    color: rgba(93, 78, 55, 0.7); /* Coffee Brown at 70% opacity */
+  }
+  
+  /* Category Tags/Pills */
+  .category-tag {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem; /* 12px */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #7CB342; /* Fresh Lime */
+    color: #FFFEF2; /* Cream White */
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+  @media (min-width: 768px) {
+    .category-tag {
+      font-size: 0.875rem; /* 14px */
+    }
+  }
+  
+  /* Product Price Tags - Inter Bold 700, 20-24px */
+  .price-tag {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem; /* 20px */
+    color: #3A7D44; /* Garden Green */
+  }
+  @media (min-width: 768px) {
+    .price-tag {
+      font-size: 1.5rem; /* 24px */
+    }
+  }
+  
+  /* Testimonial Quotes - Cormorant Garamond, 20-22px, Italic */
+  .testimonial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.25rem; /* 20px */
+    font-style: italic;
+    color: #5D4E37; /* Coffee Brown */
+    line-height: 1.6;
+  }
+  @media (min-width: 768px) {
+    .testimonial-quote {
+      font-size: 1.375rem; /* 22px */
+    }
   }
 }
 
