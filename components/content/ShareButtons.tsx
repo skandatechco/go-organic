@@ -23,7 +23,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
     <div className="flex items-center gap-4">
       <span className="text-text/70 font-medium">Share:</span>
       <div className="flex items-center gap-2">
-        <FacebookShareButton url={fullUrl} quote={title}>
+        <FacebookShareButton url={fullUrl}>
           <FacebookIcon size={32} round />
         </FacebookShareButton>
         <TwitterShareButton url={fullUrl} title={title}>
@@ -32,7 +32,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
         <LinkedinShareButton url={fullUrl} title={title}>
           <LinkedinIcon size={32} round />
         </LinkedinShareButton>
-        <EmailShareButton url={fullUrl} subject={title}>
+        <EmailShareButton url={fullUrl} subject={title} body={`Check out: ${title}`}>
           <EmailIcon size={32} round />
         </EmailShareButton>
       </div>
