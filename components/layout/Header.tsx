@@ -4,8 +4,19 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X, Leaf, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { siteNavigation } from '@/types/navigation'
 
-const navigation = [
+const navigation = siteNavigation.map(item => ({
+  name: item.name,
+  href: item.href,
+  submenu: item.submenu.map(sub => ({
+    name: sub.name,
+    href: sub.href
+  }))
+}))
+
+// Keep old navigation structure for backward compatibility during transition
+const oldNavigation = [
   { 
     name: 'Start Here', 
     href: '/start-here',
