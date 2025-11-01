@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
 import { Clock } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -13,11 +14,13 @@ export default function ArticleCard({ post }: ArticleCardProps) {
     <Link href={`/blog/${post.slug}`} className="group">
       <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30">
         {post.image && (
-          <div className="aspect-video w-full overflow-hidden rounded-t-lg bg-primary/5">
-            <img
+          <div className="aspect-video w-full overflow-hidden rounded-t-lg bg-primary/5 relative">
+            <Image
               src={post.image}
               alt={post.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         )}

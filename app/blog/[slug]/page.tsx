@@ -3,6 +3,7 @@ import { formatDate } from '@/lib/utils'
 import { Clock, Calendar, User } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import ShareButtons from '@/components/content/ShareButtons'
 import ArticleCard from '@/components/content/ArticleCard'
 import { markdownToHtml } from '@/lib/markdown'
@@ -87,11 +88,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {post.image && (
-                <div className="aspect-video w-full overflow-hidden rounded-lg bg-primary/5 mb-8">
-                  <img
+                <div className="aspect-video w-full overflow-hidden rounded-lg bg-primary/5 mb-8 relative">
+                  <Image
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
                   />
                 </div>
               )}

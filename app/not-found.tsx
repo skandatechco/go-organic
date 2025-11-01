@@ -11,7 +11,7 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="text-text/70 mb-8 max-w-md mx-auto">
-          The page you're looking for doesn't exist or has been moved.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Button size="lg" asChild>
           <Link href="/">
