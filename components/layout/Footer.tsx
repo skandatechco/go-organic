@@ -22,38 +22,38 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Leaf className="h-6 w-6" />
-              <span className="text-xl font-bold">goOrganic</span>
+              <Leaf className="h-6 w-6 text-white" />
+              <span className="text-xl font-bold text-white">goOrganic</span>
             </Link>
-            <p className="text-primary-light/80 mb-4 max-w-md">
+            <p className="text-white/90 mb-4 max-w-md text-base">
               Practical guides, honest reviews, and curated products for a healthier home.
               Make the shift to organic living—one choice at a time.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-primary-light/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-primary-light/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-primary-light/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-primary-light/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -62,13 +62,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Navigation</h3>
+            <h3 className="font-semibold mb-4 text-white text-lg">Navigation</h3>
             <ul className="space-y-2">
               {footerNavigation.main.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-primary-light/80 hover:text-white transition-colors"
+                    className="text-white/90 hover:text-white transition-colors text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded underline-offset-4 hover:underline"
                   >
                     {item.name}
                   </Link>
@@ -78,13 +78,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="font-semibold mb-4 text-white text-lg">Resources</h3>
             <ul className="space-y-2">
               {footerNavigation.resources.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-primary-light/80 hover:text-white transition-colors"
+                    className="text-white/90 hover:text-white transition-colors text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded underline-offset-4 hover:underline"
                   >
                     {item.name}
                   </Link>
@@ -94,18 +94,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-light/20 mt-8 pt-8 text-center text-primary-light/80 text-sm">
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/90 text-sm">
           <p>&copy; {new Date().getFullYear()} goOrganic. All rights reserved.</p>
           <div className="mt-2 space-x-4">
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link 
+              href="/privacy" 
+              className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded underline-offset-4 hover:underline"
+            >
               Privacy Policy
             </Link>
-            <span>|</span>
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <span className="text-white/70" aria-hidden="true">|</span>
+            <Link 
+              href="/terms" 
+              className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded underline-offset-4 hover:underline"
+            >
               Terms of Service
             </Link>
-            <span>|</span>
-            <Link href="/disclosure" className="hover:text-white transition-colors">
+            <span className="text-white/70" aria-hidden="true">|</span>
+            <Link 
+              href="/disclosure" 
+              className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded underline-offset-4 hover:underline"
+            >
               Disclosure
             </Link>
           </div>
