@@ -124,7 +124,7 @@ export default function HomePage() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Editor's Choice</CardTitle>
+                <CardTitle>Editor&apos;s Choice</CardTitle>
                 <CardDescription>Products we love and trust</CardDescription>
               </CardHeader>
               <CardContent>
@@ -185,7 +185,7 @@ export default function HomePage() {
               New to Organic?
             </h2>
             <p className="text-lg text-text/70 mb-8">
-              Starting your organic journey can feel overwhelming. Our beginner's guide makes it
+              Starting your organic journey can feel overwhelming. Our beginner&apos;s guide makes it
               simple and practical.
             </p>
             <Button size="lg" variant="accent" asChild>

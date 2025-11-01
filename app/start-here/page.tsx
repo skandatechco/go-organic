@@ -65,7 +65,7 @@ export default function StartHerePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Go Organic?</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-text/80 mb-4">
-                Making the shift to organic living isn't about perfection—it's about making better
+                Making the shift to organic living isn&apos;t about perfection—it&apos;s about making better
                 choices, one step at a time. Every organic product you choose is a vote for:
               </p>
               <ul className="space-y-3 text-text/80">
@@ -101,8 +101,8 @@ export default function StartHerePage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Where to Start</h2>
             <p className="text-lg text-text/80 mb-8">
-              Don't try to change everything at once. Focus on areas with the highest impact first.
-              Here's our priority framework:
+              Don&apos;t try to change everything at once. Focus on areas with the highest impact first.
+              Here&apos;s our priority framework:
             </p>
             <div className="space-y-4">
               <Card>
