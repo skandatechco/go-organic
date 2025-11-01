@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
+import config from '@/tina/config'
 
 // Dynamically import TinaAdmin only on client side
 const TinaAdmin = dynamic(() => import('tinacms').then((mod) => mod.TinaAdmin), {
@@ -57,6 +58,6 @@ export default function AdminPage() {
     )
   }
 
-  return <TinaAdmin />
+  return <TinaAdmin config={config} />
 }
 
